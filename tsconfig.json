@@ -1,34 +1,36 @@
-﻿{
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es2017",
-    "module": "esnext",
-    "moduleResolution": "node",
-
-    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
+    "strict": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "stripInternal": true,
-    "strictPropertyInitialization": true,
-
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "importHelpers": true,
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "lib": [ "es2018", "dom" ],
-
-    "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "./out-tsc",
-
+    "declaration": false,
+    "downlevelIteration": true,
     "paths": {
-      "@dagonmetric/ng-config": [ "./modules/ng-config" ],
-      "@dagonmetric/ng-config/http-config": [ "./modules/ng-config/http-config" ]
-    }
+      "ng-config": [
+        "dist/ng-config/ng-config",
+        "dist/ng-config"
+      ]
+    },
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }

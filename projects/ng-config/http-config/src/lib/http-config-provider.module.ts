@@ -8,7 +8,7 @@
 
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import { CONFIG_PROVIDER } from '../config-provider';
+import { CONFIG_PROVIDER } from '@kyosho-/ng-config';
 
 import { HttpConfigProvider } from './http-config-provider';
 import { HTTP_CONFIG_PROVIDER_OPTIONS, HttpConfigProviderOptions } from './http-config-provider-options';

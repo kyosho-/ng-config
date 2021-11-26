@@ -15,6 +15,10 @@
       "@kyosho-/ng-config": [
         "dist/ng-config/ng-config",
         "dist/ng-config"
+      ],
+      "@kyosho-/ng-config/http-config": [
+        "dist/ng-config/ng-config/http-config",
+        "dist/ng-config/http-config"
       ]
     },
     "experimentalDecorators": true,

@@ -11,8 +11,7 @@ import { Inject, Injectable, Injector } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { ConfigProvider } from '../config-provider';
-import { ConfigSection } from '../config-value';
+import { ConfigProvider, ConfigSection } from '@kyosho-/ng-config';
 
 import {
   HTTP_CONFIG_PROVIDER_OPTIONS,

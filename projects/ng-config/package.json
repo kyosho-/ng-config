@@ -1,6 +1,35 @@
 {
   "name": "@kyosho-/ng-config",
-  "version": "12.0.0",
+  "version": "12.2.0",
+  "description": "Configuration and options service for Angular applications.",
+  "author": "Akira Kurosawa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyosho-/ng-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kyosho-/ng-config/issues"
+  },
+  "homepage": "https://github.com/kyosho-/ng-config",
+  "keywords": [
+    "angular-config",
+    "ng-config",
+    "angular-config-service",
+    "angular-configuration-service",
+    "angular-options",
+    "angular-options-service",
+    "angular-options-provider",
+    "angular-config-provider",
+    "angular-config-loader",
+    "angular-settings-service",
+    "configuration-service",
+    "config-service",
+    "options-service",
+    "settings-service",
+    "angular",
+    "typescript"
+  ],
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0"

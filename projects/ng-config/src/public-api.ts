@@ -8,5 +8,3 @@ export * from './lib/config.module';
 export * from './lib/config.service';
 export * from './lib/config-value';
 export * from './lib/logger';
-
-export * from './lib/http-config';

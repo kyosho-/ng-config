@@ -1,6 +1,6 @@
 {
   "name": "ng-config",
-  "version": "0.0.0",
+  "version": "12.2.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,8 @@
     "build:lib": "ng build ng-config",
     "pack:lib": "npm pack ./dist/ng-config --pack-destination ./target",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "publish": "npm publish dist/ng-config --access public"
   },
   "private": true,
   "dependencies": {

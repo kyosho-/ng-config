@@ -12,7 +12,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
-      "ng-config": [
+      "@kyosho-/ng-config": [
         "dist/ng-config/ng-config",
         "dist/ng-config"
       ]

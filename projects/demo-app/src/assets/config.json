@@ -1,0 +1,7 @@
+{
+    "hoge": "piyo",
+    "test": {
+        "num": 1,
+        "array": ["a", "b"]
+    }
+}

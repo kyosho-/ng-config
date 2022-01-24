@@ -1,6 +1,6 @@
 {
   "name": "@kyosho-/ng-config",
-  "version": "12.2.1",
+  "version": "12.2.2",
   "description": "Configuration and options service for Angular applications.",
   "author": "Akira Kurosawa",
   "license": "MIT",

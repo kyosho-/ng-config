@@ -1,22 +1,22 @@
 # Configuration & Options Service for Angular
 
-[![GitHub Actions Status](https://github.com/DagonMetric/ng-config/workflows/Main%20Workflow/badge.svg)](https://github.com/DagonMetric/ng-config/actions)
-[![Azure Pipelines Status](https://dev.azure.com/DagonMetric/ng-config/_apis/build/status/DagonMetric.ng-config?branchName=master)](https://dev.azure.com/DagonMetric/ng-config/_build?definitionId=9)
-[![codecov](https://codecov.io/gh/DagonMetric/ng-config/branch/master/graph/badge.svg)](https://codecov.io/gh/DagonMetric/ng-config)
-[![Gitter](https://badges.gitter.im/DagonMetric/general.svg)](https://gitter.im/DagonMetric/general?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+<!-- [![GitHub Actions Status](https://github.com/kyosho-/ng-config/workflows/Main%20Workflow/badge.svg)](https://github.com/kyosho-/ng-config/actions)
+[![Azure Pipelines Status](https://dev.azure.com/kyosho-/ng-config/_apis/build/status/kyosho-.ng-config?branchName=master)](https://dev.azure.com/kyosho-/ng-config/_build?definitionId=9)
+[![codecov](https://codecov.io/gh/kyosho-/ng-config/branch/master/graph/badge.svg)](https://codecov.io/gh/kyosho-/ng-config)
+[![Gitter](https://badges.gitter.im/kyosho-/general.svg)](https://gitter.im/kyosho-/general?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) -->
 
 The `ng-config` is a configuration and options service for Angular applications with flexible api and extendable config providers.
 
 ## Features
 
-* **`mapType(key, MyOptionsClass)`** - map configuration values with options class
-* **`mapObject(key, myOptionsObj)`** - map configuration values with options object
-* **`getValue('myKey')`** - get the raw configuration section value
-* **`reload()`** - reload the fresh configuration values from config providers
-* **`valueChanges`** - configuration value changes event
-* **`ConfigProvider`** - extendable config provider interface and multiple config providers are supported
-* **`ConfigModule.configure(true, {...})`** - load configuration automatically at app starts
-* Latest version of Angular and compatible with server side rendering (SSR / Angular Universal)
+- **`mapType(key, MyOptionsClass)`** - map configuration values with options class
+- **`mapObject(key, myOptionsObj)`** - map configuration values with options object
+- **`getValue('myKey')`** - get the raw configuration section value
+- **`reload()`** - reload the fresh configuration values from config providers
+- **`valueChanges`** - configuration value changes event
+- **`ConfigProvider`** - extendable config provider interface and multiple config providers are supported
+- **`ConfigModule.configure(true, {...})`** - load configuration automatically at app starts
+- Latest version of Angular and compatible with server side rendering (SSR / Angular Universal)
 
 ## Get Started
 
@@ -25,22 +25,22 @@ The `ng-config` is a configuration and options service for Angular applications 
 npm
 
 ```bash
-npm install @dagonmetric/ng-config
+npm install @kyosho-/ng-config
 ```
 
 or yarn
 
 ```bash
-yarn add @dagonmetric/ng-config
+yarn add @kyosho-/ng-config
 ```
 
-Latest npm package is [![npm version](https://badge.fury.io/js/%40dagonmetric%2Fng-config.svg)](https://www.npmjs.com/package/@dagonmetric/ng-config)
+Latest npm package is [![npm version](https://badge.fury.io/js/%40dagonmetric%2Fng-config.svg)](https://www.npmjs.com/package/@kyosho-/ng-config)
 
 ### Module Setup (app.module.ts)
 
 ```typescript
-import { ConfigModule } from '@dagonmetric/ng-config';
-import { HttpConfigProviderModule } from '@dagonmetric/ng-config/http-config';
+import { ConfigModule } from "@kyosho-/ng-config";
+import { HttpConfigProviderModule } from "@kyosho-/ng-config/http-config";
 
 @NgModule({
   imports: [
@@ -48,15 +48,15 @@ import { HttpConfigProviderModule } from '@dagonmetric/ng-config/http-config';
 
     // ng-config modules
     ConfigModule.configure(true, {
-      debug: true
+      debug: true,
     }),
     HttpConfigProviderModule.configure({
-        endpoint: '/api/v1/configuration'
+      endpoint: "/api/v1/configuration",
     }),
     // And additional config provider imports...
-  ]
+  ],
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 Live edit [app.module.ts in stackblitz](https://stackblitz.com/github/dagonmetric/ng-config/tree/master/samples/demo-app?file=src%2Fapp%2Fapp.module.ts)
@@ -66,7 +66,7 @@ Live edit [app.module.ts in stackblitz](https://stackblitz.com/github/dagonmetri
 ```typescript
 import { Component } from '@angular/core';
 
-import { ConfigService } from '@dagonmetric/ng-config';
+import { ConfigService } from '@kyosho-/ng-config';
 
 export class AppOptions {
   name = '';
@@ -112,17 +112,17 @@ Live edit [app.component.ts in stackblitz](https://stackblitz.com/github/dagonme
 
 ## Samples & Documentations
 
-* Demo app [view source](https://github.com/DagonMetric/ng-config/tree/master/samples/demo-app) / [live edit in stackblitz](https://stackblitz.com/github/dagonmetric/ng-config/tree/master/samples/demo-app)
-* Documentation wiki [ng-config wiki](https://github.com/DagonMetric/ng-config/wiki)
+- Demo app [view source](https://github.com/kyosho-/ng-config/tree/master/samples/demo-app) / [live edit in stackblitz](https://stackblitz.com/github/dagonmetric/ng-config/tree/master/samples/demo-app)
+- Documentation wiki [ng-config wiki](https://github.com/kyosho-/ng-config/wiki)
 
 ## Integrations
 
-* [ng-config-firebase-remote-config](https://github.com/DagonMetric/ng-config-firebase-remote-config) - Implements [ConfigProvider](https://github.com/DagonMetric/ng-config/blob/master/modules/ng-config/src/config-provider.ts) for Firebase Remote Config
+- [ng-config-firebase-remote-config](https://github.com/kyosho-/ng-config-firebase-remote-config) - Implements [ConfigProvider](https://github.com/kyosho-/ng-config/blob/master/modules/ng-config/src/config-provider.ts) for Firebase Remote Config
 
 ## Related Projects
 
-* [ng-log](https://github.com/DagonMetric/ng-log) - Vendor-agnostic logging, analytics and telemetry service abstractions and some implementations for Angular applications
-* [ng-cache](https://github.com/DagonMetric/ng-cache) - Caching service for Angular applications
+- [ng-log](https://github.com/kyosho-/ng-log) - Vendor-agnostic logging, analytics and telemetry service abstractions and some implementations for Angular applications
+- [ng-cache](https://github.com/kyosho-/ng-cache) - Caching service for Angular applications
 
 ## Build & Test Tools
 
@@ -132,8 +132,8 @@ We use [lib-tools](https://github.com/lib-tools/lib-tools) for bundling, testing
 
 ## Feedback and Contributing
 
-Check out the [Contributing](https://github.com/DagonMetric/ng-config/blob/master/CONTRIBUTING.md) page.
+Check out the [Contributing](https://github.com/kyosho-/ng-config/blob/master/CONTRIBUTING.md) page.
 
 ## License
 
-This repository is licensed with the [MIT](https://github.com/DagonMetric/ng-config/blob/master/LICENSE) license.
+This repository is licensed with the [MIT](https://github.com/kyosho-/ng-config/blob/master/LICENSE) license.

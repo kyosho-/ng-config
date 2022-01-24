@@ -1,139 +1,27 @@
-# Configuration & Options Service for Angular
+# NgConfig
 
-<!-- [![GitHub Actions Status](https://github.com/kyosho-/ng-config/workflows/Main%20Workflow/badge.svg)](https://github.com/kyosho-/ng-config/actions)
-[![Azure Pipelines Status](https://dev.azure.com/kyosho-/ng-config/_apis/build/status/kyosho-.ng-config?branchName=master)](https://dev.azure.com/kyosho-/ng-config/_build?definitionId=9)
-[![codecov](https://codecov.io/gh/kyosho-/ng-config/branch/master/graph/badge.svg)](https://codecov.io/gh/kyosho-/ng-config)
-[![Gitter](https://badges.gitter.im/kyosho-/general.svg)](https://gitter.im/kyosho-/general?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) -->
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-The `ng-config` is a configuration and options service for Angular applications with flexible api and extendable config providers.
+## Development server
 
-## Features
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-- **`mapType(key, MyOptionsClass)`** - map configuration values with options class
-- **`mapObject(key, myOptionsObj)`** - map configuration values with options object
-- **`getValue('myKey')`** - get the raw configuration section value
-- **`reload()`** - reload the fresh configuration values from config providers
-- **`valueChanges`** - configuration value changes event
-- **`ConfigProvider`** - extendable config provider interface and multiple config providers are supported
-- **`ConfigModule.configure(true, {...})`** - load configuration automatically at app starts
-- Latest version of Angular and compatible with server side rendering (SSR / Angular Universal)
+## Code scaffolding
 
-## Get Started
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Installation
+## Build
 
-npm
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-```bash
-npm install @kyosho-/ng-config
-```
+## Running unit tests
 
-or yarn
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```bash
-yarn add @kyosho-/ng-config
-```
+## Running end-to-end tests
 
-Latest npm package is [![npm version](https://badge.fury.io/js/%40dagonmetric%2Fng-config.svg)](https://www.npmjs.com/package/@kyosho-/ng-config)
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### Module Setup (app.module.ts)
+## Further help
 
-```typescript
-import { ConfigModule } from "@kyosho-/ng-config";
-import { HttpConfigProviderModule } from "@kyosho-/ng-config/http-config";
-
-@NgModule({
-  imports: [
-    // Other module imports
-
-    // ng-config modules
-    ConfigModule.configure(true, {
-      debug: true,
-    }),
-    HttpConfigProviderModule.configure({
-      endpoint: "/api/v1/configuration",
-    }),
-    // And additional config provider imports...
-  ],
-})
-export class AppModule {}
-```
-
-Live edit [app.module.ts in stackblitz](https://stackblitz.com/github/dagonmetric/ng-config/tree/master/samples/demo-app?file=src%2Fapp%2Fapp.module.ts)
-
-### Usage
-
-```typescript
-import { Component } from '@angular/core';
-
-import { ConfigService } from '@kyosho-/ng-config';
-
-export class AppOptions {
-  name = '';
-  lang = '';
-  logEnabled = false;
-  logLevel = 0;
-}
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
-})
-export class AppComponent {
-  constructor(private readonly configService: ConfigService) {
-    // Get with key
-    const configValue = this.configService.getValue('key1'));
-    console.log('value: ', configValue);
-
-    // Get with options class
-    const appOptions = this.configService.mapType('app', AppOptions));
-    console.log('appOptions: ', JSON.stringify(appOptions));
-
-    // Call reload to get the fresh config values from providers
-    // this.configService.reload().subscribe(() => {
-    //   console.log('Reloaded');
-    // });
-
-    // Configuration value change detection
-    // This will only trigger when reload() is called and
-    // any value changes
-    this.configService.valueChanges.subscribe(() => {
-      const latestValue = this.configService.getValue('key1'));
-      console.log('latest value: ', latestValue);
-
-      const lastestOptions = this.configService.mapType('app', AppOptions));
-      console.log('lastest appOptions: ', lastestOptions);
-    });
-  }
-}
-```
-
-Live edit [app.component.ts in stackblitz](https://stackblitz.com/github/dagonmetric/ng-config/tree/master/samples/demo-app?file=src%2Fapp%2Fapp.component.ts)
-
-## Samples & Documentations
-
-- Demo app [view source](https://github.com/kyosho-/ng-config/tree/master/samples/demo-app) / [live edit in stackblitz](https://stackblitz.com/github/dagonmetric/ng-config/tree/master/samples/demo-app)
-- Documentation wiki [ng-config wiki](https://github.com/kyosho-/ng-config/wiki)
-
-## Integrations
-
-- [ng-config-firebase-remote-config](https://github.com/kyosho-/ng-config-firebase-remote-config) - Implements [ConfigProvider](https://github.com/kyosho-/ng-config/blob/master/modules/ng-config/src/config-provider.ts) for Firebase Remote Config
-
-## Related Projects
-
-- [ng-log](https://github.com/kyosho-/ng-log) - Vendor-agnostic logging, analytics and telemetry service abstractions and some implementations for Angular applications
-- [ng-cache](https://github.com/kyosho-/ng-cache) - Caching service for Angular applications
-
-## Build & Test Tools
-
-We use [lib-tools](https://github.com/lib-tools/lib-tools) for bundling, testing and packaging our library projects.
-
-[![Lib Tools](https://repository-images.githubusercontent.com/273890506/28038a00-dcea-11ea-8b4a-7d655158ccf2)](https://github.com/lib-tools/lib-tools)
-
-## Feedback and Contributing
-
-Check out the [Contributing](https://github.com/kyosho-/ng-config/blob/master/CONTRIBUTING.md) page.
-
-## License
-
-This repository is licensed with the [MIT](https://github.com/kyosho-/ng-config/blob/master/LICENSE) license.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

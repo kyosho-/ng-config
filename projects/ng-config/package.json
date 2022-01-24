@@ -1,6 +1,6 @@
 {
   "name": "@kyosho-/ng-config",
-  "version": "12.2.2",
+  "version": "13.1.0",
   "description": "Configuration and options service for Angular applications.",
   "author": "Akira Kurosawa",
   "license": "MIT",
@@ -31,8 +31,8 @@
     "typescript"
   ],
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0"
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

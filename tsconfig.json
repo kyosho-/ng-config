@@ -12,10 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ng-config": [
-        "dist/ng-config/ng-config",
-        "dist/ng-config"
-      ]
+      "ng-config": ["dist/ng-config/ng-config", "dist/ng-config"]
     },
     "declaration": false,
     "downlevelIteration": true,
@@ -23,11 +20,8 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "module": "ES2022",
+    "lib": ["es2022", "dom"],
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {

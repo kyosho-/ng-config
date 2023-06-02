@@ -22,7 +22,7 @@ import {
  * Implements an HTTP client API for HttpConfigProvider that relies on the Angular HttpClient.
  */
 @Injectable({
-  providedIn: 'any',
+  providedIn: 'root',
 })
 export class HttpConfigProvider implements ConfigProvider {
   get name(): string {
